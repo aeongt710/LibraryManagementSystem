@@ -1,0 +1,32 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@*<div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>*@
+<div class="grid-container">
+    <div class="heads">
+        <h1 style="font-size: 30px;">Welcome to the Dashoard</h1>
+        <P>Welcome to the dashboard of the Library Managment System, where you can check your quick stats.</P>
+    </div>
+    <div class="cardz">
+        <p style="text-align:justify">This software uses to maintain the record of the library. It contains work like the number of available books in the library, the number of books are issued or returning or renewing a book or late fine charge record, etc. It helps to maintain a database that is useful to enter new books & record books borrowed by the members, with the respective submission dates. Moreover, it also reduces the manual record burden of the librarian.</p>
+            <div style="display:inline-block; padding-right:30px" >
+                <strong><a asp-page="./Books/Index" style="color: whitesmoke">Books:</a></strong>
+                <p>+@Model.BooksCount</p>
+            </div>
+            <div style="display:inline-block">
+                <strong><a asp-page="./Subscribers/Index" style="color: whitesmoke">Subscribers: </a></strong>
+                <p>+@Model.SubCount</p>
+            </div>
+
+
+    </div>
+    <div class="imgz">
+        <img src="~/img1.png" alt="">
+    </div>
+</div>
